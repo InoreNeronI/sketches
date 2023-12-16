@@ -31,4 +31,4 @@ export const ENABLE_CANVAS_SCALING = true;
 /**
  * The directory path of assets.
  */
-export const ASSETS_DIRECTORY_PATH = 'assets';
+export const ASSETS_DIRECTORY_PATH = '../assets';
