@@ -1,0 +1,222 @@
+@use 'sass:map';
+
+@import 'font', 'icon';
+
+/*=============== Theme variables ===============*/
+// Forest
+$forest: (
+  'dark': #838149,
+  'light': #588349,
+) !default;
+// Fire
+$fire: (
+  'dark': #834949,
+  'light': #ff8c00,
+) !default;
+// Earth
+$earth: (
+  'dark': #5c4637,
+  'light': #e0c39a,
+) !default;
+// Air
+$air: (
+  'dark': #27374f,
+  'light': #a3b9c8,
+) !default;
+// Water
+$water: (
+  'dark': #005e74,
+  'light': #00bcd4,
+) !default;
+// High contrast
+$high: (
+  'dark': #222,
+  'light': #fff,
+) !default;
+
+/*=============== Other variables ===============*/
+$cursor-action: pointer;
+$line-height-default: 1.4;
+
+/* Photon
+  @see https://github.com/connors/photon */
+@import 'photonkit/sass/mixins', 'mixins/responsive-layout-mixin', 'mixins/theme-mixin';
+
+:root {
+  @import 'photonkit/sass/appify';
+  // THEMING
+  // Forest
+  @if variable-exists(forest) and variable-exists(forest) {
+    &.inset.forest {
+      @include theme-mixin(#{map.get($forest, 'dark')}, #{map.get($forest, 'light')});
+      @include responsive-layout-mixin();
+    }
+    &.reverse.forest {
+      @include theme-mixin(#{map.get($forest, 'light')}, #{map.get($forest, 'dark')});
+      @include responsive-layout-mixin();
+    }
+  }
+  // Fire
+  @if variable-exists(fire) and variable-exists(fire) {
+    &.inset.fire {
+      @include theme-mixin(#{map.get($fire, 'dark')}, #{map.get($fire, 'light')});
+      @include responsive-layout-mixin();
+    }
+    &.reverse.fire {
+      @include theme-mixin(#{map.get($fire, 'light')}, #{map.get($fire, 'dark')});
+      @include responsive-layout-mixin();
+    }
+  }
+  // Earth
+  @if variable-exists(earth) and variable-exists(earth) {
+    &.inset.earth {
+      @include theme-mixin(#{map.get($earth, 'dark')}, #{map.get($earth, 'light')});
+      @include responsive-layout-mixin();
+    }
+    &.reverse.earth {
+      @include theme-mixin(#{map.get($earth, 'light')}, #{map.get($earth, 'dark')});
+      @include responsive-layout-mixin();
+    }
+  }
+  // Air
+  @if variable-exists(air) and variable-exists(air) {
+    &.inset.air {
+      @include theme-mixin(#{map.get($air, 'dark')}, #{map.get($air, 'light')});
+      @include responsive-layout-mixin();
+    }
+    &.reverse.air {
+      @include theme-mixin(#{map.get($air, 'light')}, #{map.get($air, 'dark')});
+      @include responsive-layout-mixin();
+    }
+  }
+  // Water
+  @if variable-exists(water) and variable-exists(water) {
+    &.inset.water {
+      @include theme-mixin(#{map.get($water, 'dark')}, #{map.get($water, 'light')});
+      @include responsive-layout-mixin();
+    }
+    &.reverse.water {
+      @include theme-mixin(#{map.get($water, 'light')}, #{map.get($water, 'dark')});
+      @include responsive-layout-mixin();
+    }
+  }
+  // High contrast
+  @if variable-exists(high) and variable-exists(high) {
+    &.inset.high {
+      @include theme-mixin(#{map.get($high, 'dark')}, #{map.get($high, 'light')});
+      @include responsive-layout-mixin();
+    }
+    &.reverse.high {
+      @include theme-mixin(#{map.get($high, 'light')}, #{map.get($high, 'dark')});
+      @include responsive-layout-mixin();
+    }
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .btn {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: $cursor-action;
+    margin-bottom: 0;
+    padding: 3px 8px;
+    font-size: $font-size-default;
+    line-height: $line-height-default;
+    text-align: center;
+    white-space: nowrap;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    &.icon {
+      float: left;
+      padding-left: 0.6rem;
+      img {
+        vertical-align: text-top;
+      }
+    }
+    * {
+      cursor: $cursor-action;
+      font-size: $font-size-default;
+    }
+    i {
+      vertical-align: middle;
+    }
+    span {
+      vertical-align: text-bottom;
+      font-family: $font-family-default;
+    }
+  }
+  // Normal screen size
+  &.normal {
+    .btn {
+      &.icon {
+        display: flex;
+        align-items: center;
+        max-width: unset;
+      }
+      span {
+        visibility: visible;
+        margin-left: 0.5rem;
+      }
+    }
+    header .title {
+      visibility: visible;
+    }
+    .sidebar {
+      .nav-group-title {
+        visibility: visible;
+      }
+      .nav-group-item {
+        padding: initial;
+        span {
+          visibility: visible;
+        }
+      }
+    }
+    footer {
+      visibility: visible;
+      line-height: 1;
+    }
+  }
+  // Fullscreen size
+  &.fullscreen {
+    .btn {
+      &.icon {
+        max-width: 2.25rem;
+      }
+      span {
+        visibility: hidden;
+      }
+    }
+    header .title {
+      position: absolute;
+      visibility: hidden;
+    }
+    .sidebar {
+      min-width: 2.75rem;
+      .nav-group {
+        .nav-group-title {
+          visibility: hidden;
+          padding: 0;
+          height: 0;
+        }
+        .nav-group-item {
+          padding: 0 0.7rem;
+          span {
+            visibility: hidden;
+          }
+        }
+        .nav-group-divisor {
+          visibility: hidden;
+          margin: 0;
+        }
+      }
+    }
+    footer {
+      visibility: hidden;
+      line-height: 0;
+    }
+  }
+}

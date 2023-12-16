@@ -1,0 +1,33 @@
+// @see https://codepen.io/josetxu/details/WNYdaPz
+@mixin gradient-mixin($dark, $light) {
+  --sz: 20px; /*
+  --c1: #ffd79f;
+  --c2: #e7bf84;
+  --c3: #cba266;
+  --c4: #ad8346;*/
+  --c1: #ffffff;
+  --c2: #d7d7d7;
+  --c3: #c7c7c7;
+  --c4: #a3a3a3;
+  --ts: 50% / calc(var(--sz) * 10) calc(var(--sz) * 10);
+  background:
+    conic-gradient(from 160deg at 35% 65%, $dark 0%, $light 20%, $dark 45% 100%) var(--ts),
+    conic-gradient(from 65deg at 65% 65%, $dark 0%, $light 20%, $dark 45% 100%) var(--ts),
+    conic-gradient(from 340deg at 65% 35%, $dark 0%, $light 20%, $dark 45% 100%) var(--ts),
+    conic-gradient(from 240deg at 35% 35%, $dark 0%, $light 20%, $dark 45% 100%) var(--ts),
+    linear-gradient(90deg, $dark calc(50% - 1px), var(--c2) 50%, $dark calc(50% + 1px) 100%) var(--ts),
+    linear-gradient(0deg, $dark calc(50% - 1px), var(--c2) 50%, $dark calc(50% + 1px) 100%) var(--ts),
+    linear-gradient(-45deg, $dark calc(50% - 1px), var(--c2) 50%, $dark calc(50% + 1px) 100%) var(--ts),
+    linear-gradient(45deg, $dark calc(50% - 1px), var(--c2) 50%, $dark calc(50% + 1px) 100%) var(--ts),
+    linear-gradient(90deg, var(--c2) 0 1px, $dark 0 100%) var(--ts),
+    linear-gradient(var(--c2) 0 1px, $dark 0 100%) var(--ts),
+    radial-gradient($dark calc(var(--sz) * 0), #0002 calc(var(--sz) * 10)) var(--ts),
+    repeating-conic-gradient(#0002 0.0000001%, $dark 0.0005%, $dark 0.00007%, $dark 0.00009%),
+    repeating-conic-gradient(#0002 0.00001%, $dark 0.00009%, $dark 0.00075%, $dark 0.000025%),
+    conic-gradient(from 157deg at 35% 65%, var(--c1) 0 68deg, var(--c3) 0 136deg, $dark 0 100%) var(--ts),
+    conic-gradient(from 67deg at 65% 65%, var(--c1) 0 68deg, var(--c3) 0 136deg, $dark 0 100%) var(--ts),
+    conic-gradient(from 337deg at 65% 35%, var(--c1) 0 68deg, var(--c3) 0 136deg, $dark 0 100%) var(--ts),
+    conic-gradient(from 247deg at 35% 35%, var(--c1) 0 68deg, var(--c3) 0 136deg, $dark 0 100%) var(--ts),
+    repeating-conic-gradient(from 0deg at 50% 50%, var(--c2) 0 45deg, var(--c4) 0 90deg, $dark 0 100%) var(--ts),
+    var(--c2);
+}

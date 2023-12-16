@@ -1,0 +1,58 @@
+{
+  "name": "sketches",
+  "version": "1.0.0",
+  "description": "A couple of Processing games",
+  "homepage": "https://github.com/InoreNeronI/sketches",
+  "scripts": {
+    "build": "parcel build src/{*.html,**/*.html} --public-url /sketches",
+    "postbuild": "cp -nrv sketches/* dist",
+    "prestart": "rm -fr .parcel-cache dist && eslint --fix . && prettier --write . && mkdir dist && npm run postbuild",
+    "start": "parcel serve src/{*.html,**/*.html} --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InoreNeronI/sketches.git"
+  },
+  "keywords": [],
+  "author": "Martin Mozos <martinmozos@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InoreNeronI/sketches/issues"
+  },
+  "dependencies": {
+    "@fal-works/creative-coding-core": "^0.1.7",
+    "@fal-works/p5-extension": "^0.1.7",
+    "bootstrap-icons": "^1.11.2",
+    "p5": "^0.9.0",
+    "photonkit": "^0.1.2",
+    "processing-js": "^1.6.6"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.10.3",
+    "@parcel/transformer-sass": "^2.10.3",
+    "@parcel/transformer-webmanifest": "^2.10.3",
+    "@parcel/validator-eslint": "^2.10.3",
+    "eslint": "^7.32.0",
+    "parcel": "^2.10.3",
+    "posthtml-extend": "^0.6.5",
+    "posthtml-include": "^1.7.4",
+    "prettier": "3.1.1",
+    "prettier-plugin-css-order": "^2.0.1"
+  },
+  "alias": {
+    "@fal-works/creative-coding-core": {
+      "global": "CreativeCodingCore"
+    },
+    "@fal-works/p5-extension": {
+      "global": "p5ex"
+    },
+    "p5": {
+      "global": "p5"
+    }
+  },
+  "targets": {
+    "default": {
+      "context": "browser"
+    }
+  }
+}

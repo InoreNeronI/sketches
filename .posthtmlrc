@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "posthtml-extend": {
+      "root": "assets/templates"
+    },
+    "posthtml-include": {
+      "root": "assets/templates"
+    }
+  }
+}

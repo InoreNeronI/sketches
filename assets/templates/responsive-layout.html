@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <block name="title"><title>Sketches</title></block>
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="../../assets/favicons/manifest.json" />
+    <link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="../../assets/favicons/favicon.ico" type="image/x-icon" />
+    <block name="styles"><link rel="stylesheet" href="../../assets/styles/responsive-layout.scss" /></block>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <div class="title"><block name="header">Sketches</block></div>
+        <div class="toolbar-actions">
+          <button class="btn btn-default icon" form="actions" title="Hello world!" type="submit">
+            <img src="../../assets/favicons/favicon.ico" alt="favicon" height="22" width="22" /><span>
+              Hello world!</span
+            >
+          </button>
+          <!--<div class="btn-group">
+              <button class="btn btn-default" title="Left"><i class="bi bi-arrow-left-short"></i></button>
+              <button class="btn btn-default" title="Right"><i class="bi bi-arrow-right-short"></i></button>
+          </div>-->
+          <button class="pull-right btn btn-default screen" title="Fullscreen or normal screen">
+            <i class="bi bi-arrows-angle-expand"></i>
+          </button>
+          <select class="pull-right btn btn-default theme" title="Color theme">
+            <option value="fire" title="Fire">Fire</option>
+            <option value="earth" title="Earth">Earth</option>
+            <option value="air" title="Air">Air</option>
+            <option value="water" title="Water">Water</option>
+            <option value="high" title="High contrast">High contrast</option>
+          </select>
+          <button class="pull-right btn btn-default toggle" title="Invert colors">
+            <i class="bi bi-toggle2-on"></i>
+          </button>
+          <a class="pull-right btn btn-default refresh" title="Refresh" target="_self" href="?r"
+            ><i class="bi bi-bootstrap-reboot"></i
+          ></a>
+        </div>
+        <form id="actions" action="/"></form>
+      </header>
+      <div class="window-content">
+        <div class="pane-group workspace">
+          <aside class="pane pane-sm sidebar">
+            <nav class="nav-group">
+              <block name="sidebar">
+                <h5 class="nav-group-title">Places</h5>
+                <hr class="nav-group-divisor" />
+                <div class="nav-group-item" title="Home"><i class="bi bi-house-gear"></i><span> Home</span></div>
+                <div class="nav-group-item" title="Documents">
+                  <i class="bi bi-folder2-open"></i><span> Documents</span>
+                </div>
+                <div class="nav-group-item" title="Downloads">
+                  <i class="bi bi-download"></i><span> Downloads</span>
+                </div>
+                <div class="nav-group-item" title="Desktop"><i class="bi bi-cloud"></i><span> Desktop</span></div>
+              </block>
+            </nav>
+          </aside>
+          <div class="pane main">
+            <block name="pane">
+              <table class="table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Kind</th>
+                    <th>Date Modified</th>
+                    <th>Author</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>index.html</td>
+                    <td>HTML</td>
+                    <td>Yesterday</td>
+                    <td>developit</td>
+                  </tr>
+                  <tr>
+                    <td>bundle.js</td>
+                    <td>JavaScript</td>
+                    <td>10:01 am</td>
+                    <td>developit</td>
+                  </tr>
+                  <tr>
+                    <td>photon.css</td>
+                    <td>CSS</td>
+                    <td>9:15 am</td>
+                    <td>connors</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="4">3 items</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </block>
+          </div>
+        </div>
+      </div>
+      <footer class="title toolbar toolbar-footer"><block name="footer">Sketches</block></footer>
+    </div>
+    <block name="scripts"><script src="../../assets/scripts/responsive-layout.js"></script></block>
+  </body>
+</html>

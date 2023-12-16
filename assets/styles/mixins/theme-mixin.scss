@@ -1,0 +1,43 @@
+@mixin theme-mixin($color-dark, $color-light) {
+  // Type
+  // --------------------------------------------------
+  $font-path: 'https://cdnjs.cloudflare.com/ajax/libs/photon/0.1.2-alpha/fonts/' !global;
+
+  // Colors
+  // --------------------------------------------------
+
+  // Main colors
+  $primary-color: $color-dark !global;
+  $chrome-color: $color-light !global;
+
+  // Copy
+  $gray-color: #808080 !global;
+
+  // Borders
+  $border-color: $color-light !global;
+  $dark-border-color: $color-dark !global;
+  $darker-bottom-border-color: #0e0e1c !global;
+  $toolbar-border-color: $color-light !global;
+
+  // Action colors
+  $default-color: $color-light !global;
+  $positive-color: #34c84a !global;
+  $negative-color: #fc605b !global;
+  $warning-color: #fdbc40 !global;
+
+  // Focus and active colors
+  $active-color: $color-dark !global;
+  $focus-input-color: #a9a9a9 !global;
+
+  // Other
+  // --------------------------------------------------
+
+  // Border radius
+  $default-border-radius: 4px !global;
+
+  // Padding
+  $padding: 10px !global;
+  $padding-mini: 3px !global;
+  $padding-less: 5px !global;
+  $padding-more: 20px !global;
+}
