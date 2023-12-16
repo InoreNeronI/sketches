@@ -8,7 +8,7 @@
     Ver. 0.4 (12. Feb. 2018)  Enabled scaling.
 */
 
-/* @pjs font="duel/Creepster-Regular.ttf"; */
+/* @pjs font="../assets/Creepster-Regular.ttf"; */
 
 // CAUTION: spaghetti code!!!
 
@@ -46,7 +46,7 @@ void setup() {
   frameRate(IDEAL_FRAME_RATE);
 
   // Prepare font
-  final String fontFilePath = "duel/Creepster-Regular.ttf";
+  final String fontFilePath = "../assets/Creepster-Regular.ttf";
   final String fontName = "Creepster";
   smallFont = createFont(USE_WEB_FONT ? fontName : fontFilePath, 20.0, true);
   largeFont = createFont(USE_WEB_FONT ? fontName : fontFilePath, 96.0, true);
