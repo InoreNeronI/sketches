@@ -63,14 +63,8 @@ document.querySelector('.toggle').onclick = () => {
 };
 setToggle(storage.getItem('toggle') || 'inset');
 
-new URL(document.location).searchParams.forEach((value, key) => {
-  switch (key) {
-    case 'r':
-      //console.log('refresh screen');
-      // TODO refresh
-      break; /*
-    default:
-        console.log('no url parameters');
-        break;*/
+document.querySelectorAll('.nav-group-item').forEach((value) => {
+  if (window.location.pathname.indexOf(value.className.replace('nav-group-item ', '')) === 1) {
+    value.classList.add('active');
   }
 });
