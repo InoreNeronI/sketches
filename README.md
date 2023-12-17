@@ -7,5 +7,6 @@
 - [Flappy Bird](https://openprocessing.org/sketch/729522) by [stephen Rioux](https://openprocessing.org/user/63826).
 - [Pacman](https://openprocessing.org/sketch/663582) by [ThingOnItsOwn](https://openprocessing.org/user/137792).
 - [Pong](https://github.com/michaelkolesidis/pong-processing) by [Michael Kolesidis](https://github.com/michaelkolesidis).
+- [Rainbow drops](https://github.com/nicoleoprice/rainbow-drops-game) by [Nicole Price](https://github.com/nicoleoprice).
 - [Suika](https://openprocessing.org/sketch/2084936) (Suika game) by [Charmonder](https://openprocessing.org/user/244319).
 - [Supratetris](https://html-classic.itch.zone/html/8337552/supratetris/index.html) (carve tetrominoes out of a block of tiles) by [Rianna Suen](https://vividfax.itch.io).
