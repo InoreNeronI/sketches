@@ -113,9 +113,9 @@ if (CANVAS && CANVAS.getContext) {
   context = CANVAS.getContext('2d');
   context.globalCompositeOperation = 'destination-over';
   window.addEventListener('resize', windowResizeHandler, false);
-  windowResizeHandler();
+  setTimeout(windowResizeHandler, 5);
   createParticles();
   loop();
 }
 
-document.querySelector('.screen').addEventListener('click', windowResizeHandler);
+document.querySelector('.screen').addEventListener('click', () => setTimeout(windowResizeHandler, 5));

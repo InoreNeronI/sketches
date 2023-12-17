@@ -148,6 +148,11 @@ $line-height-default: 1.4;
       font-family: $font-family-default;
     }
   }
+  .main {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
   // Normal screen size
   &.normal {
     .btn {
