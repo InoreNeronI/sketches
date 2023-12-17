@@ -25,7 +25,7 @@
     "bootstrap-icons": "^1.11.2",
     "p5": "^0.9.0",
     "photonkit": "^0.1.2",
-    "processing-js": "^1.6.6"
+    "processing-js": "github:InoreNeronI/processing-js#main"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.10.3",
