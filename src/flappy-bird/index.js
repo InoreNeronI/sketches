@@ -40,8 +40,6 @@ var page = 'MENU';
 
 var overflowX = 0;
 
-var startgame = false;
-
 var flappy_bird = {
   x: 100,
   y: 0,
@@ -140,7 +138,7 @@ var flappy_bird = {
         this.angle = 90;
       }
 
-      if (mousePressEvent || (keyPressEvent && key == ' ')) {
+      if (mousePressEvent || (keyPressEvent && key === ' ')) {
         try {
           sound_wing.play();
         } catch (e) {
@@ -189,19 +187,6 @@ var flappy_bird = {
     }
 
     this.y = height / 2 + map(sin(frameCount * 0.1), 0, 1, -2, 2);
-    /*
-    if(this.kinematicAnim > 40) {
-      this.kinematicAnim = 0;
-    }
-
-    this.kinematicAnim++;
-
-    if(this.kinematicAnim>20) {
-      this.y += 0.2;
-    }
-    else {
-      this.y -= 0.2;
-    }*/
 
     push();
     translate(this.x, this.y);
@@ -253,14 +238,6 @@ function setup() {
   sound_sweetwing = loadSound('../assets/flappy-bird/sfx_swooshing.wav');
 
   font_flappy = loadFont('../assets/flappy-bird/flappy-font.ttf');
-
-  //font_flappy = loadFont('https://flappybird.netlify.com/data/Assets/flappy-font.ttf');
-
-  //var s=httpGet('data/Assets/flappy-font.ttf','.ttf','',ss);
-
-  //textFont(font_flappy);
-
-  //document.getElementById('h').innerHTML = window.location.href;
 
   flappy_bird.y = height / 2;
 
@@ -331,7 +308,6 @@ function page_game() {
     sprite_city.width / 2,
     sprite_city.height / 2,
   );
-  //image(sprite_city, sprite_city.width/2/2+sprite_city.width/2-overflowX*0.01 ,height-sprite_city.height/2/2-40,sprite_city.width/2,sprite_city.height/2);
 
   //creator
   if (!flappy_bird.falls) {
@@ -688,43 +664,8 @@ function smoothMove(pos, target, speed) {
   return pos + (target - pos) * speed;
 }
 
-// js utility
-
-/*
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;
-}
-
-function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-    }
-}
-
-function disableScroll() {
-  if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, false);
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove  = preventDefault; // mobile
-  document.onkeydown  = preventDefaultForScrollKeys;
-}
-
-function enableScroll() {
-    if (window.removeEventListener)
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null;
-    window.onwheel = null;
-    window.ontouchmove = null;
-    document.onkeydown = null;
-}*/
-
 function mobile() {
-  if (
+  return !!(
     navigator.userAgent.match(/Android/i) ||
     navigator.userAgent.match(/webOS/i) ||
     navigator.userAgent.match(/iPhone/i) ||
@@ -732,9 +673,5 @@ function mobile() {
     navigator.userAgent.match(/iPod/i) ||
     navigator.userAgent.match(/BlackBerry/i) ||
     navigator.userAgent.match(/Windows Phone/i)
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  );
 }
