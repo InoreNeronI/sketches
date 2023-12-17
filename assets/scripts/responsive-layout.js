@@ -69,4 +69,14 @@ document.querySelectorAll('.nav-group-item').forEach((value) => {
   if (window.location.pathname.indexOf(classList[0]) > 0) {
     value.classList.add('active');
   }
+  value.addEventListener('click', (e) => {
+    e.target.childNodes.forEach((value) => {
+      if (value.tagName === 'A') {
+        // @see https://stackoverflow.com/a/1421968
+        const evt = document.createEvent('MouseEvents');
+        evt.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        value.dispatchEvent(evt);
+      }
+    });
+  });
 });

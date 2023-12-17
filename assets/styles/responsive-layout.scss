@@ -237,3 +237,11 @@ $line-height-default: 1.4;
   font-size: 2rem;
   font-family: Creepster, sans-serif;
 }
+
+.canvas-sketch {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+}

@@ -63,10 +63,10 @@
     .nav-group-item {
       display: block;
       cursor: $cursor-action;
-      padding: 2px 10px 2px 25px;
       overflow: hidden;
       color: $chrome-color;
       font-size: calc($font-size-default * 0.85);
+      text-align: center;
       text-decoration: none;
       text-overflow: ellipsis;
       white-space: nowrap;
