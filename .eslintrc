@@ -9,6 +9,7 @@
   },
   "rules": {
     "no-constant-condition": "warn",
+    "no-dupe-else-if": "warn",
     "no-undef": "warn",
     "no-unused-vars": "warn"
   }
