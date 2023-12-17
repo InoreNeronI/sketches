@@ -1,0 +1,14 @@
+<extends src="responsive-layout.html">
+  <block name="title"><title>Pong</title></block>
+  <block name="header">Pong</block>
+  <block name="pane">
+    <canvas
+      class="canvas-sketch"
+      data-processing-sources="Ball.pde LeftPaddle.pde Net.pde pong1_3.pde RightPaddle.pde Score.pde"
+    ></canvas>
+  </block>
+  <block name="footer">Pong</block>
+  <block name="scripts" type="append">
+    <script src="../../node_modules/processing-js/processing.js"></script>
+  </block>
+</extends>
