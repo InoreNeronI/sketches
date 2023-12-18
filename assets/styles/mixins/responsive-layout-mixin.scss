@@ -71,6 +71,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       &:active,
+      &:hover,
       &.active {
         @include gradient-mixin($chrome-color, $primary-color);
         background-size: cover;

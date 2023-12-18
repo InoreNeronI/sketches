@@ -1,0 +1,22 @@
+<extends src="responsive-layout.html">
+  <block name="title"><title>Sudo Sweep (a sudoku x minesweeper hybrid)</title></block>
+  <block name="styles" type="append"><link rel="stylesheet" href="index.scss" /></block>
+  <block name="header">Sudo Sweep</block>
+  <block name="pane">
+    <div id="SudoSweep"></div>
+    <button id="size">Change size</button>
+    <button id="refresh">New game</button>
+  </block>
+  <block name="footer">Sudo Sweep</block>
+  <block name="scripts" type="append">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+      integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+    <script src="Sudoku.js"></script>
+    <script src="Minesweeper.js"></script>
+  </block>
+</extends>

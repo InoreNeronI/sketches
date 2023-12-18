@@ -252,7 +252,6 @@ document.querySelector('.screen').addEventListener('click', () => setTimeout(win
 
 // @see https://stackoverflow.com/a/51600005
 function windowResizeHandler() {
-  console.log('resizing');
   resizeCanvas(parent.offsetWidth, parent.offsetHeight);
 }
 
