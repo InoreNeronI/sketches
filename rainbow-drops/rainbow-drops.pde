@@ -11,7 +11,6 @@ Drops drop;
 Drops newDrop;
 Cup rainbowCup;
 Score scoreBoard;
-PFont font;
 boolean screen = true;
 
 
@@ -162,12 +161,15 @@ imageMode(CENTER);
   rainbowCup = new Cup();
   scoreBoard = new Score();
 }
+
+/* @pjs font="../assets/Creepster-Regular.ttf"; */
+
+textFont(createFont("../assets/Creepster-Regular.ttf", 128));
+
 void draw() {
-  font = loadFont("OCRAExtended-26.vlw");
   background(#b6c9ff);
  if(screen) {
   image(title, width/2, height/3, 600, 250);
-  textFont(font);
   textSize(30);
   fill(0);
   textAlign(CENTER);
