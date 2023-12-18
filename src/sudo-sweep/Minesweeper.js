@@ -1,5 +1,5 @@
 class Minesweeper {
-  constructor(x, y, w, h, subw, subh) {
+  constructor(x, y, w, h, subw, subh, font) {
     this.x = x;
     this.y = y;
     this.w = w;
@@ -13,6 +13,7 @@ class Minesweeper {
     this.visibility = [...Array(this.size * this.subw)].map((e) => Array(this.size * this.subw));
     this.flagged = [...Array(this.size * this.subw)].map((e) => Array(this.size * this.subw));
     this.exploded = false;
+    this.font = font;
   }
 
   setMines(sudoku) {
@@ -59,7 +60,7 @@ class Minesweeper {
   getClues(grid) {
     for (let i = 0; i < this.size * this.subw; i++) {
       for (let j = 0; j < this.size * this.subh; j++) {
-        if (grid[i][j] == '⁕') {
+        if (grid[i][j] === '⁕') {
           continue;
         }
         const neighbours = this.getNeighbours(grid, i, j);
@@ -77,13 +78,13 @@ class Minesweeper {
 
     for (let i = x - 1; i <= x + 1; i++) {
       for (let j = y - 1; j <= y + 1; j++) {
-        if (i == x && j == y) {
+        if (i === x && j === y) {
           continue;
         }
         if (i < 0 || i >= this.size * this.subw || j < 0 || j >= this.size * this.subh) {
           continue;
         }
-        if (grid[i][j] == '⁕') {
+        if (grid[i][j] === '⁕') {
           neighbours += 1;
         }
       }
@@ -103,7 +104,7 @@ class Minesweeper {
         const y = (j * 60) / this.subh;
         const number = this.grid[i][j];
 
-        if (this.visibility[i][j] && !(this.flagged[i][j] && number == '⁕')) {
+        if (this.visibility[i][j] && !(this.flagged[i][j] && number === '⁕')) {
           fill('#DBEBE9');
         } else {
           fill(white);
@@ -114,9 +115,9 @@ class Minesweeper {
 
         noStroke();
         textAlign(CENTER, CENTER);
-        textFont('Fira Code');
+        textFont(this.font);
 
-        if (number == '⁕') {
+        if (number === '⁕') {
           fill(dark);
           textSize(cellSize);
         } else {
@@ -128,7 +129,7 @@ class Minesweeper {
           textSize(cellSize * 0.75);
           text('?', x + cellSize / 2, y + 60 / this.subh / 2 + 2);
         } else if (this.visibility[i][j]) {
-          if (number == '⁕') {
+          if (number === '⁕') {
             text('*', x + cellSize / 2, y + 60 / this.subh / 2 + 2);
           } else {
             text(number, x + cellSize / 2, y + 60 / this.subh / 2 + 2);
@@ -173,15 +174,15 @@ class Minesweeper {
       for (let j = 0; j < this.size * this.subh; j++) {
         if (x > i * cellSize && x < i * cellSize + cellSize) {
           if (y > (j * 60) / this.subh && y < (j * 60) / this.subh + 60 / this.subh) {
-            if (startTime == '') {
+            if (startTime === '') {
               startTime = new Date();
               startTime = startTime.getTime();
             }
-            if (mouseButton == LEFT && !this.flagged[i][j]) {
-              if (this.grid[i][j] == '⁕') {
+            if (mouseButton === LEFT && !this.flagged[i][j]) {
+              if (this.grid[i][j] === '⁕') {
                 this.explode();
                 lose = true;
-              } else if (this.grid[i][j] == '') {
+              } else if (this.grid[i][j] === '') {
                 this.visibility[i][j] = true;
                 this.freeNeighbours(i, j);
               } else {
@@ -190,7 +191,7 @@ class Minesweeper {
             } else if (mouseButton != LEFT && !this.visibility[i][j]) {
               this.flagged[i][j] = !this.flagged[i][j];
             }
-            if (mouseButton == LEFT) {
+            if (mouseButton === LEFT) {
               this.chord(i, j);
             }
           }
@@ -211,7 +212,7 @@ class Minesweeper {
   freeNeighbours(x, y) {
     for (let i = x - 1; i <= x + 1; i++) {
       for (let j = y - 1; j <= y + 1; j++) {
-        if (i == x && j == y) {
+        if (i === x && j === y) {
           continue;
         } else if (i < 0 || j < 0 || i >= this.size * this.subw || j >= this.size * this.subh) {
           continue;
@@ -219,7 +220,7 @@ class Minesweeper {
         if (!this.visibility[i][j]) {
           this.visibility[i][j] = true;
 
-          if (this.grid[i][j] == '') {
+          if (this.grid[i][j] === '') {
             this.freeNeighbours(i, j);
           }
         }
@@ -228,7 +229,7 @@ class Minesweeper {
   }
 
   chord(i, j) {
-    if (this.flaggedNeighbours(i, j) == this.grid[i][j]) {
+    if (this.flaggedNeighbours(i, j) === this.grid[i][j]) {
       this.chordNeighbours(i, j);
     }
   }
@@ -238,7 +239,7 @@ class Minesweeper {
 
     for (let i = x - 1; i <= x + 1; i++) {
       for (let j = y - 1; j <= y + 1; j++) {
-        if (i == x && j == y) {
+        if (i === x && j === y) {
           continue;
         }
         if (i < 0 || i >= this.size * this.subw || j < 0 || j >= this.size * this.subh) {
@@ -258,9 +259,9 @@ class Minesweeper {
         if (i >= 0 && j >= 0 && i < this.size * this.subw && j < this.size * this.subh) {
           if (this.flagged[i][j]) {
             // continue;
-          } else if (this.grid[i][j] == '⁕') {
+          } else if (this.grid[i][j] === '⁕') {
             this.explode();
-          } else if (this.grid[i][j] == '') {
+          } else if (this.grid[i][j] === '') {
             this.visibility[i][j] = true;
             this.freeNeighbours(i, j);
           } else {
@@ -277,7 +278,7 @@ class Minesweeper {
     }
     for (let i = 0; i < this.size * this.subw; i++) {
       for (let j = 0; j < this.size * this.subh; j++) {
-        if (!this.visibility[i][j] && this.grid[i][j] != '⁕') {
+        if (!this.visibility[i][j] && this.grid[i][j] !== '⁕') {
           return false;
         }
       }

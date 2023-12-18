@@ -36,13 +36,19 @@ let size = 0;
 
 const parent = document.querySelector('.main');
 
+let fontRegular;
+
+function preload() {
+  fontRegular = loadFont('../assets/Creepster-Regular.ttf');
+}
+
 function setup() {
   const CANVAS = createCanvas(parent.offsetWidth, parent.offsetHeight);
   CANVAS.parent('SudoSweep');
   createBackground();
 
-  sudo = new Sudoku(width / 2 - 60 * w * h - 30, height / 2 - 30 * w * h, w, h);
-  sweep = new Minesweeper(width / 2 + 30, height / 2 - 30 * w * h, w, h, subw, subh);
+  sudo = new Sudoku(width / 2 - 60 * w * h - 30, height / 2 - 30 * w * h, w, h, fontRegular);
+  sweep = new Minesweeper(width / 2 + 30, height / 2 - 30 * w * h, w, h, subw, subh, fontRegular);
   sweep.setMines(sudo.grid);
 
   document.addEventListener('contextmenu', (event) => event.preventDefault());
@@ -124,7 +130,7 @@ function displayTime() {
   }
   fill(white);
   textSize(30);
-  textFont('Fira Code');
+  textFont(fontRegular);
   textAlign(CENTER, CENTER);
   text(timeElapsed, width / 2, 50);
 }

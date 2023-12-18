@@ -1,5 +1,5 @@
 class Sudoku {
-  constructor(x, y, w, h) {
+  constructor(x, y, w, h, font) {
     this.x = x;
     this.y = y;
     this.w = w;
@@ -16,10 +16,11 @@ class Sudoku {
     this.hint = [...Array(this.size)].map((e) => Array(this.size));
 
     this.hide();
+    this.font = font;
   }
 
   findPath(grid, position, current) {
-    if (position == this.size * this.size) {
+    if (position === this.size * this.size) {
       return grid;
     }
     if (this.conflict(grid, position, current)) {
@@ -33,11 +34,11 @@ class Sudoku {
 
     let options;
 
-    if (this.size == 4) {
+    if (this.size === 4) {
       options = [1, 2, 3, 4];
-    } else if (this.size == 6) {
+    } else if (this.size === 6) {
       options = [1, 2, 3, 4, 5, 6];
-    } else if (this.size == 9) {
+    } else if (this.size === 9) {
       options = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     }
     options = shuffle(options);
@@ -60,16 +61,16 @@ class Sudoku {
     const sector = this.getSector(position);
 
     for (let i = 0; i < this.size; i++) {
-      if (grid[column][i] == current || grid[i][row] == current) {
+      if (grid[column][i] === current || grid[i][row] === current) {
         return true;
       }
     }
     for (let i = 0; i < position; i++) {
-      if (sector == this.getSector(i)) {
+      if (sector === this.getSector(i)) {
         const iColumn = this.getColumn(i);
         const iRow = this.getRow(i);
 
-        if (grid[iColumn][iRow] == current) {
+        if (grid[iColumn][iRow] === current) {
           return true;
         }
       }
@@ -114,7 +115,7 @@ class Sudoku {
         noStroke();
         textSize(cellSize / 2);
         textAlign(CENTER, CENTER);
-        textFont('Fira Code');
+        textFont(this.font);
 
         let number;
 
@@ -126,7 +127,7 @@ class Sudoku {
           fill(mid);
         }
         number -= 1; // modded for 0-3 instead of 1-this.size
-        if (number == -1) {
+        if (number === -1) {
           number = '';
         }
         text(number, x + cellSize / 2, y + cellSize / 2 + 1);
@@ -149,11 +150,11 @@ class Sudoku {
   hide() {
     let arr;
 
-    if (this.size == 4) {
+    if (this.size === 4) {
       arr = [0, 0, 0, -1];
-    } else if (this.size == 6) {
+    } else if (this.size === 6) {
       arr = [0, 0, 0, 0, 0, -1];
-    } else if (this.size == 9) {
+    } else if (this.size === 9) {
       arr = [0, 0, 0, 0, 0, 0, 0, 0, -1];
     }
     let rand = shuffle(arr);
@@ -162,7 +163,7 @@ class Sudoku {
       for (let j = 0; j < this.size; j++) {
         this.guess[i][j] = 0;
 
-        if (this.grid[i][j] == 1 && rand[i] == 0) {
+        if (this.grid[i][j] === 1 && rand[i] === 0) {
           this.hint[i][j] = 1;
           this.guess[i][j] = 1;
         }
@@ -180,30 +181,30 @@ class Sudoku {
       for (let j = 0; j < this.size; j++) {
         if (x > i * cellSize && x < i * cellSize + cellSize) {
           if (y > j * cellSize && y < j * cellSize + cellSize) {
-            if (startTime == '') {
+            if (startTime === '') {
               startTime = new Date();
               startTime = startTime.getTime();
             }
 
             let max;
 
-            if (this.size == 4) {
+            if (this.size === 4) {
               max = 5;
-            } else if (this.size == 6) {
+            } else if (this.size === 6) {
               max = 7;
-            } else if (this.size == 9) {
+            } else if (this.size === 9) {
               max = 10;
             }
-            if (!this.hint[i][j] && mouseButton == LEFT) {
+            if (!this.hint[i][j] && mouseButton === LEFT) {
               this.guess[i][j] += 1;
 
-              if (this.guess[i][j] == max) {
+              if (this.guess[i][j] === max) {
                 this.guess[i][j] = 0;
               }
             } else if (!this.hint[i][j]) {
               this.guess[i][j] -= 1;
 
-              if (this.guess[i][j] == -1) {
+              if (this.guess[i][j] === -1) {
                 this.guess[i][j] = max - 1;
               }
             }

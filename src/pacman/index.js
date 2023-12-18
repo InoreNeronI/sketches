@@ -1,3 +1,9 @@
+let fontRegular;
+
+function preload() {
+  fontRegular = loadFont('../assets/Creepster-Regular.ttf');
+}
+
 function setup() {
   background(100);
   Z = 40;
@@ -280,6 +286,7 @@ function draw() {
     }
   }
 
+  textFont(fontRegular);
   text('Score: ' + score, 50, 25);
   //; stroke(color(255))
   //if (getlevel(mouseX,mouseY) != '1')
