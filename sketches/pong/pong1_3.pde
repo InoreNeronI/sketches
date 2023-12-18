@@ -10,9 +10,11 @@ RightPaddle paddleR;
 LeftPaddle paddleL;
 int level = 2;    // Level determines ball speed and left paddle speed
 
+const containerRect = window.document.querySelector("canvas").getBoundingClientRect();
+
 void setup() {
   // Set screen size
-  size(600, 400);
+  size(containerRect.width, containerRect.height);
   // Cursor is not visible
   noCursor();
   // Create font file
