@@ -9,6 +9,7 @@
 - [**Pacman**](https://openprocessing.org/sketch/663582) by [ThingOnItsOwn](https://openprocessing.org/user/137792).
 - [**Pong**](https://github.com/michaelkolesidis/pong-processing) by [Michael Kolesidis](https://github.com/michaelkolesidis).
 - [**Rainbow drops**](https://github.com/nicoleoprice/rainbow-drops-game) by [Nicole Price](https://github.com/nicoleoprice).
+- [**Rat road**](https://openprocessing.org/sketch/386078) by [Vamoss](https://openprocessing.org/user/65884).
 - [**Space Invaders**](https://github.com/Barqawiz/space-invaders-js) (a classic arcade game) by [Ahmad Albarqawi](https://ie.linkedin.com/in/barqawi).
 - [**Sudo Sweep**](https://gamesforcrows.itch.io/sudo-sweep) (a sudoku x minesweeper hybrid) by [Rianna Suen](https://vividfax.itch.io).
 - [**Suika**](https://openprocessing.org/sketch/2084936) by [Charmonder](https://openprocessing.org/user/244319).
