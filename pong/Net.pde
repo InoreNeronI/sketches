@@ -4,7 +4,7 @@ class Net {
   }
 
   void display() {
-    for (int i = 0; i < 70; i++) {
+    for (int i = 0; i < containerRect.height; i++) {
       if (i%2 == 0) {
         fill(255);
       } else {
