@@ -1,0 +1,22 @@
+<extends src="responsive-layout.html">
+  <block name="title"><title>Snake</title></block>
+  <block name="styles" type="append"><link rel="stylesheet" href="index.scss" /></block>
+  <block name="header">Snake</block>
+  <block name="pane"><div id="Snake"></div></block>
+  <block name="footer">Snake</block>
+  <block name="scripts" type="append">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+      integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="classes/game.js"></script>
+    <script src="classes/block.js"></script>
+    <script src="classes/grid.js"></script>
+    <script src="classes/score.js"></script>
+    <script src="classes/snake.js"></script>
+    <script src="classes/food.js"></script>
+    <script src="index.js"></script>
+  </block>
+</extends>
