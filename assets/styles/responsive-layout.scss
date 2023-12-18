@@ -226,13 +226,6 @@ $line-height-default: 1.4;
   }
 }
 
-@font-face {
-  font-style: normal;
-  font-weight: normal;
-  src: url('../../sketches/assets/Creepster-Regular.ttf');
-  font-family: Creepster;
-}
-
 #p5_loading {
   position: absolute;
   top: 50%;
@@ -240,7 +233,7 @@ $line-height-default: 1.4;
   transform: translate(-50%, -50%);
   margin: auto;
   font-size: 2rem;
-  font-family: Creepster, sans-serif;
+  font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
 }
 
 .canvas-sketch {

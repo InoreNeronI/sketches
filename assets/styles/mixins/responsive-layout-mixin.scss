@@ -56,7 +56,7 @@
       margin: 0;
       padding: 10px 10px 2px;
       color: $chrome-color;
-      font-weight: $font-weight-default;
+      font-weight: $font-weight;
       font-size: calc($font-size-default * 0.65);
       text-align: center;
     }
@@ -83,6 +83,9 @@
       }
       i {
         font-size: $font-size-default;
+      }
+      span {
+        font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
       }
     }
     .nav-group-divisor {

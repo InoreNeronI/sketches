@@ -1,4 +1,6 @@
 
+/* @pjs font="../assets/Creepster-Regular.ttf"; */
+
 PFont font;
 
 Ball ball;
@@ -14,7 +16,7 @@ void setup() {
   // Cursor is not visible
   noCursor();
   // Create font file
-  font = createFont("../assets/pong/bit5x3.ttf", 48);
+  font = createFont("../assets/Creepster-Regular.ttf", 128);
   // Initialize objects
   ball = new Ball();
   score = new Score();

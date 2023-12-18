@@ -1,15 +1,8 @@
-@font-face {
-  font-style: normal;
-  font-weight: normal;
-  src: url('../../sketches/assets/Creepster-Regular.ttf');
-  font-family: Creepster;
-}
-
 #SudoSweep {
   display: flex;
   width: inherit;
   height: inherit;
-  font-family: Creepster, sans-serif;
+  font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
   > canvas {
     display: block;
     position: relative;
@@ -31,7 +24,7 @@
     height: 40px;
     color: #fff;
     font-size: 18px;
-    font-family: Creepster, sans-serif;
+    font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
     user-select: none;
     -moz-user-select: none;
 
@@ -48,6 +41,4 @@
       transform: translate(30px, 0);
     }
   }
-
-
 }
