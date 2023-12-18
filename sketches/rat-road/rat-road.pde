@@ -194,7 +194,7 @@ void draw(){
   //opening screen
   textSize(18);
   fill(textColor);
-  text("Multiplayer game, the object is to close a square.", 290, -55);
+  text("Multiplayer game, the objective is to close a square.", 290, -55);
 
   //opening screen
   if(!started){
