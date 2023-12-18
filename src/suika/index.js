@@ -6,8 +6,8 @@ let array;
 let fruitColors = ['#f32223', '#ac6cff', '#f7ba00', '#fa080e', '#fdef9d', '#ffb5ac', '#f8ee11', '#9fdd0f', '#42b307'];
 
 function setup() {
-  const myCanvas = createCanvas(500, 600);
-  myCanvas.parent('Suika');
+  const CANVAS = createCanvas(500, 600);
+  CANVAS.parent('Suika');
   background('#f7f2c8');
   world.gravity.y = 15;
 

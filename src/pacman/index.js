@@ -58,8 +58,8 @@ function setup() {
   lvlh = h * Z;
   windowWidth = lvlw;
   windowHeight = lvlh;
-  const myCanvas = createCanvas(windowWidth, windowHeight);
-  myCanvas.parent('Pacman');
+  const CANVAS = createCanvas(windowWidth, windowHeight);
+  CANVAS.parent('Pacman');
 
   aap = [];
   for (i = 0; i < w * h; i++) aap.push(getlevel((i % w) * Z, Z * floor(i / w)) == '1' ? -1 : 0);

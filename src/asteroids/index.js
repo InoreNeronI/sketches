@@ -236,8 +236,8 @@ function Ship() {
 const parent = document.querySelector('.main');
 
 function setup() {
-  const myCanvas = createCanvas(parent.offsetWidth, parent.offsetHeight);
-  myCanvas.parent('Asteroids');
+  const CANVAS = createCanvas(parent.offsetWidth, parent.offsetHeight);
+  CANVAS.parent('Asteroids');
   pixelDensity(2);
   background(0);
   s = new Ship();

@@ -79,7 +79,22 @@ function preload() {
   sounds.music.loop = true;
 }
 
+function windowResized() {
+  windowResizeHandler();
+}
+
+document.querySelector('.screen').addEventListener('click', () => setTimeout(windowResizeHandler, 5));
+const parent = document.querySelector('.main');
+
+// @see https://stackoverflow.com/a/51600005
+function windowResizeHandler() {
+  resizeCanvas(parent.offsetWidth, parent.offsetHeight);
+}
+
 function setup() {
+  const CANVAS = createCanvas(parent.offsetWidth, parent.offsetHeight);
+  CANVAS.parent('Supratetris');
+
   for (let colour in palette) {
     palette[colour] = color(palette[colour]);
   }
@@ -367,8 +382,6 @@ function setup() {
     ],
   ];
 
-  const myCanvas = createCanvas(1440, 815);
-  myCanvas.parent('Supratetris');
   rectMode(CENTER);
   imageMode(CENTER);
   textFont(fudgeFont);
