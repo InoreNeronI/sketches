@@ -8,6 +8,8 @@ let lastTapTime = 0;
 const doubleTapThreshold = 300;
 
 function setup() {
+  const fontRegular = loadFont('../assets/Creepster-Regular.ttf');
+  textFont(fontRegular);
   game = new Game();
 }
 

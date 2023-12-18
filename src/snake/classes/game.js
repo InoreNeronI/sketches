@@ -25,8 +25,7 @@ class Game {
 
     const CANVAS = createCanvas(this.canvasWidth, this.canvasHeight);
     CANVAS.parent('Snake');
-    const fr = (this.canvasWidth + this.canvasHeight) / 150;
-    console.log(`Frame Rate: ${fr}`);
+    const fr = (this.canvasWidth + this.canvasHeight) / 170;
     frameRate(fr);
     this.newGame();
   }
