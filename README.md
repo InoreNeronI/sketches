@@ -17,3 +17,4 @@
 - [**Sudo Sweep**](https://gamesforcrows.itch.io/sudo-sweep) (a sudoku x minesweeper hybrid) by [Rianna Suen](https://vividfax.itch.io).
 - [**Suika**](https://openprocessing.org/sketch/2084936) by [Charmonder](https://openprocessing.org/user/244319).
 - [**Supratetris**](https://vividfax.itch.io/fudge) (carve tetrominoes out of a block of tiles) by [Rianna Suen](https://vividfax.itch.io).
+- [**Tetris**](https://codepen.io/dylangggg/pen/pQJzpz) by [Dylan Greene](https://codepen.io/dylangggg).

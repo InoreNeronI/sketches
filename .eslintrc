@@ -10,6 +10,7 @@
   "rules": {
     "no-constant-condition": "warn",
     "no-dupe-else-if": "warn",
+    "no-redeclare": "warn",
     "no-undef": "off",
     "no-unused-vars": "warn"
   }
