@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  #AngryPacman {
+    > canvas {
+      display: block;
+      position: relative;
+      margin: auto;
+      padding: 0;
+    }
+  }
+  p {
+    background-color: lightgray;
+    padding: 0.5rem; /*
+    width: 864px;*/
+    color: rgb(1, 87, 155);
+    strong {
+      font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
+    }
+  }
+  span {
+    color: red;
+    font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
+  }
+}
