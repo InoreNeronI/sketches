@@ -1,0 +1,34 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  * {
+    font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
+  }
+  #settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    width: 33vw;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h3:last-of-type {
+      margin-top: 1rem;
+    }
+    p {
+      margin: 0;
+    }
+    .title {
+      font-size: 2rem;
+    }
+    #gameSettings {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

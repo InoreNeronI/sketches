@@ -1,0 +1,54 @@
+<extends src="responsive-layout.html">
+  <block name="title"><title>Snake pro</title></block>
+  <block name="styles" type="append"><link rel="stylesheet" href="index.scss" /></block>
+  <block name="header">Snake pro</block>
+  <block name="pane">
+    <div id="canvas"></div>
+    <div id="settings">
+      <h3 class="title">Game Settings</h3>
+      <div id="gameSettings">
+        <p id="gameSizeLbl">Size:&nbsp;</p>
+        <div id="gameSize"></div>
+        <p id="gameSpeedLbl">Speed:&nbsp;</p>
+        <div id="gameSpeed"></div>
+        <div id="drawWalls"></div>
+        <div id="arrows"></div>
+      </div>
+      <h3 class="title">Player Selection</h3>
+      <p>
+        If selecting Human, make sure you also click on the Canvas after selection, otherwise your button presses will
+        be registered by other browser elements.
+      </p>
+      <div id="playerSelect"></div>
+      <p>
+        <span id="scoreCount">Score: </span>,
+        <span id="gameCount">Game Count: </span>
+      </p>
+      <p>
+        <span id="scoreMean">Mean: </span>, <span id="scoreMedian">Median: </span>, <span id="scoreMin">Min: </span>,
+        <span id="scoreMax">Max: </span>
+      </p>
+    </div>
+  </block>
+  <block name="footer">Snake pro</block>
+  <block name="scripts" type="append">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/immutable/4.3.4/immutable.min.js"
+      integrity="sha512-nwD3McehjAW59xj0M2ryB1F7omUdIEtsCb6aKXLpnY+bRF+OZvUJ7MAOWMUHqiLSHUy63hBNh/+sbGrvJ76Vig=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+      integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="src/utils.js"></script>
+    <script src="src/game.js"></script>
+    <script src="src/shortest-path.js"></script>
+    <script src="src/q-learning.js"></script>
+    <script src="src/hamiltonian.js"></script>
+    <script src="src/sketch.js"></script>
+  </block>
+</extends>

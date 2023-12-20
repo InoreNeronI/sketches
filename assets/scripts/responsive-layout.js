@@ -66,7 +66,7 @@ setToggle(storage.getItem('toggle') || 'inset');
 document.querySelectorAll('.nav-group-item').forEach((value) => {
   const classList = Array.from(value.classList);
   classList.splice(classList.indexOf('nav-group-item'), 1);
-  if (window.location.pathname.indexOf(classList[0]) > 0) {
+  if (window.location.pathname.indexOf(classList[0] + '/') > 0) {
     value.classList.add('active');
   }
   value.addEventListener('click', (e) => {

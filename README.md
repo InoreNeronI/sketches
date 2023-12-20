@@ -12,6 +12,7 @@
 - [**Rainbow drops**](https://github.com/nicoleoprice/rainbow-drops-game) by [Nicole Price](https://github.com/nicoleoprice).
 - [**Rat road**](https://openprocessing.org/sketch/386078) by [Carlos de Oliveira](https://openprocessing.org/user/65884).
 - [**Snake**](https://danielgilchrist.github.io/p5.js-snake) by [Daniel Gilchrist](https://github.com/DanielGilchrist).
+- [**Snake pro**](https://github.com/Immodal/snake) by [Nigel Chin](https://github.com/Immodal).
 - [**Space Invaders**](https://ahmadai.com/games/space) (a classic arcade game) by [Ahmad Albarqawi](https://github.com/Barqawiz).
 - [**Sudo Sweep**](https://gamesforcrows.itch.io/sudo-sweep) (a sudoku x minesweeper hybrid) by [Rianna Suen](https://vividfax.itch.io).
 - [**Suika**](https://openprocessing.org/sketch/2084936) by [Charmonder](https://openprocessing.org/user/244319).

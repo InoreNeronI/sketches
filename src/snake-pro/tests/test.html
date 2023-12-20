@@ -1,0 +1,34 @@
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/immutable/4.3.4/immutable.min.js"
+  integrity="sha512-nwD3McehjAW59xj0M2ryB1F7omUdIEtsCb6aKXLpnY+bRF+OZvUJ7MAOWMUHqiLSHUy63hBNh/+sbGrvJ76Vig=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+  integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="tinytest.js"></script>
+<script src="../src/utils.js"></script>
+<script src="../src/game.js"></script>
+<script src="../src/q-learning.js"></script>
+<script src="../src/shortest-path.js"></script>
+<script src="../src/hamiltonian.js"></script>
+<!--<script src="../src/sketch.js"></script> -->
+<script src="utils-tests.js"></script>
+<script src="game-tests.js"></script>
+<script src="qLearn-tests.js"></script>
+<script src="shortestPath-tests.js"></script>
+<script src="hamiltonian-tests.js"></script>
+<script>
+  let testObj = {};
+  Object.assign(testObj, utilsTests);
+  Object.assign(testObj, gameTests);
+  Object.assign(testObj, QLearnTests);
+  Object.assign(testObj, ShortestPathTests);
+  Object.assign(testObj, HamiltonianTests);
+  // Run
+  tests(testObj);
+</script>
