@@ -12,7 +12,7 @@
 - [**Far East**](https://openprocessing.org/sketch/769137) (shooter game with graphics generated from Kanji characters) by [FAL Works](https://openprocessing.org/user/67512).
 - [**Flappy Bird**](https://openprocessing.org/sketch/729522) by [Stephen Rioux](https://openprocessing.org/user/63826).
 - [**Pacman**](https://openprocessing.org/sketch/663582) by [ThingOnItsOwn](https://openprocessing.org/user/137792).
-- [**Pong**](https://github.com/michaelkolesidis/pong-processing) by [Michael Kolesidis](https://github.com/michaelkolesidis).
+- [**Pong**](https://github.com/michaelkolesidis/pong-processing) by [Michael Kolesidis](https://michaelkolesidis.com).
 - [**Rainbow drops**](https://github.com/nicoleoprice/rainbow-drops-game) by [Nicole Price](https://github.com/nicoleoprice).
 - [**Rat road**](https://openprocessing.org/sketch/386078) by [Carlos de Oliveira](https://openprocessing.org/user/65884).
 - [**Snake**](https://danielgilchrist.github.io/p5.js-snake) by [Daniel Gilchrist](https://github.com/DanielGilchrist).
