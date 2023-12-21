@@ -1,0 +1,90 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Colors */
+
+:root {
+  --accent1: #f1c40f;
+  --accent2: #37dbd0;
+  --bg: #1e003d;
+  --fg: #ecf0f1;
+  --sidebar: #4e046d;
+}
+
+/* Page structure */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+
+  * {
+    font-family: Creepster, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
+  }
+
+  #Bullethell {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+
+  #sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sidebar);
+    max-width: 260px;
+    max-height: 100vh;
+    overflow-y: scroll;
+  }
+
+  header {
+    padding: 16px;
+  }
+
+  main {
+    flex: 1;
+    padding: 0 16px;
+  }
+
+  /* Page content */
+
+  canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--accent1);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--accent1);
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  .control {
+    color: var(--accent2);
+    font-weight: bold;
+  }
+
+  #debug {
+    display: none;
+  }
+}

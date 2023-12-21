@@ -4,6 +4,7 @@
 - [**Angry Pacman**](https://codepen.io/matedemorphy/pen/bREMZJ) by [Joseph A.](https://github.com/matedemorphy).
 - [**Asteroids**](https://codepen.io/tehryanx/pen/dOepMX) by [Ryan C](https://codepen.io/tehryanx).
 - [**Breakout**](https://editor.p5js.org/aabhay.kashyap/sketches/TpkMpovUj) by [Aabhay Kashyap](https://editor.p5js.org/aabhay.kashyap/sketches).
+- [**Bullet Hell**](https://github.com/rsaihe/bullethell) by [Amelia Clarke](https://rsaihe.dev).
 - [**Chess**](https://openprocessing.org/sketch/1779274) (2 player game) by [HAZZZA](https://openprocessing.org/user/224122).
 - [**Doom IV**](https://openprocessing.org/sketch/2116230) (doomsday death gun shooter game) by [ImmortalMyst_Alt1](https://openprocessing.org/user/366484).
 - [**Duel**](https://openprocessing.org/sketch/453716) (a shooter game) by [FAL Works](https://openprocessing.org/user/67512).

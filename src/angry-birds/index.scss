@@ -3,7 +3,7 @@
 }
 
 @font-face {
-  src: url('../../sketches/assets/angry-birds/font/angrybirds-regular.ttf') format("truetype");
+  src: url('../../sketches/assets/angry-birds/font/angrybirds-regular.ttf') format('truetype');
   font-family: 'angry-birds';
 }
 
@@ -33,7 +33,10 @@
     }
   }
 
-  #score1, #score2, #score3, #score4 {
+  #score1,
+  #score2,
+  #score3,
+  #score4 {
     position: absolute;
     top: 5vh;
     right: 5vw;
@@ -64,16 +67,19 @@
     transition: all 0.8s ease;
     margin: 20px;
 
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+
     &:hover {
       transform: scale(1.2);
       cursor: pointer;
     }
-
-    border-radius: 16px;
-    background-color: rgba(0, 0, 0, 0.6);
   }
 
-  #stage1-star, #stage2-star, #stage3-star, #stage4-star {
+  #stage1-star,
+  #stage2-star,
+  #stage3-star,
+  #stage4-star {
     padding: 6px;
     color: white;
     font-size: 24px;
@@ -101,7 +107,8 @@
     left: 63vw;
   }
 
-  #pause-btn, #play-btn {
+  #pause-btn,
+  #play-btn {
     position: absolute;
     top: 4vh;
     left: 2vw;
@@ -137,7 +144,11 @@
     background: none;
   }
 
-  #pause-btn:hover, #play-btn:hover, #restart-btn:hover, #home-btn:hover, #stage-btn:hover {
+  #pause-btn:hover,
+  #play-btn:hover,
+  #restart-btn:hover,
+  #home-btn:hover,
+  #stage-btn:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
@@ -157,7 +168,10 @@
     left: 2vw;
   }
 
-  #rb-stage1, #rb-stage2, #rb-stage3, #rb-stage4 {
+  #rb-stage1,
+  #rb-stage2,
+  #rb-stage3,
+  #rb-stage4 {
     display: flex;
     position: absolute;
     left: 4px;
@@ -173,7 +187,10 @@
     height: auto;
   }
 
-  #now-bird-stage1, #now-bird-stage2, #now-bird-stage3, #now-bird-stage4 {
+  #now-bird-stage1,
+  #now-bird-stage2,
+  #now-bird-stage3,
+  #now-bird-stage4 {
     padding-bottom: 6px;
     padding-left: 10px;
     color: white;
