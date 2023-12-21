@@ -50,8 +50,9 @@
     }
   },
   "targets": {
-    "default": {
-      "context": "browser"
+    "global": {
+      "context": "browser",
+      "outputFormat": "global"
     }
   }
 }
