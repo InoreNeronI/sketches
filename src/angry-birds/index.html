@@ -1,0 +1,237 @@
+<extends src="responsive-layout.html">
+  <block name="title"><title>Angry Birds</title></block>
+  <block name="styles" type="append"><link rel="stylesheet" href="index.scss" /></block>
+  <block name="header">Angry Birds</block>
+  <block name="pane">
+    <!-- play buttons -->
+    <button id="play-home" type="button" onclick="hideButton('play-home'); showButton('stage');">
+      <img src="../../sketches/assets/angry-birds/buttons/play.png" alt="play" />
+    </button>
+
+    <!-- stage buttons -->
+    <div id="stage" style="display: none">
+      <div class="stage-wrapper">
+        <button
+          id="stage1"
+          type="button"
+          onclick="hideButton('stage');
+                showButton('pause-btn');
+                showButton('score1');
+                showButton('rb-stage1');
+                showButton('rb-stage1-red1');
+                showButton('rb-stage1-red2');
+                showButton('rb-stage1-red3');
+                showButton('transparent');"
+        >
+          1
+        </button>
+        <div id="stage1-star">start!!</div>
+      </div>
+      <div class="stage-wrapper">
+        <button
+          id="stage2"
+          type="button"
+          onclick="hideButton('stage');
+                showButton('pause-btn');
+                showButton('score2');
+                showButton('rb-stage2');
+                showButton('rb-stage2-red1');
+                showButton('rb-stage2-chuck1');
+                showButton('rb-stage2-chuck2');
+                showButton('transparent');"
+        >
+          2
+        </button>
+        <div id="stage2-star">start!!</div>
+      </div>
+      <div class="stage-wrapper">
+        <button
+          id="stage3"
+          type="button"
+          onclick="hideButton('stage');
+                showButton('pause-btn');
+                showButton('score3');
+                showButton('rb-stage3');
+                showButton('rb-stage3-red1');
+                showButton('rb-stage3-chuck1');
+                showButton('rb-stage3-bomb1');
+                showButton('transparent');"
+        >
+          3
+        </button>
+        <div id="stage3-star">start!!</div>
+      </div>
+      <div class="stage-wrapper">
+        <button
+          id="stage4"
+          type="button"
+          onclick="hideButton('stage');
+                showButton('pause-btn');
+                showButton('score4');
+                showButton('rb-stage4');
+                showButton('rb-stage4-hal1');
+                showButton('rb-stage4-hal2');
+                showButton('rb-stage4-hal3');
+                showButton('transparent');"
+        >
+          4
+        </button>
+        <div id="stage4-star">start!!</div>
+      </div>
+    </div>
+
+    <!-- function button -->
+    <div id="func-button">
+      <button
+        id="pause-btn"
+        type="button"
+        style="display: none"
+        onclick="hideButton('pause-btn');
+                showButton('pause-img');
+                showButton('play-btn');
+                showButton('restart-btn');
+                showButton('home-btn');
+                showButton('stage-btn');
+                hideButton('transparent');"
+      >
+        <img src="../../sketches/assets/angry-birds/buttons/pause-btn.png" alt="pause-btn" />
+      </button>
+      <button id="pause-img" type="button" style="display: none">
+        <img src="../../sketches/assets/angry-birds/img/pause-img.png" alt="pause-img" />
+      </button>
+      <button
+        id="play-btn"
+        type="button"
+        style="display: none"
+        onclick="showButton('pause-btn');
+                hideButton('pause-img');
+                hideButton('play-btn');
+                hideButton('restart-btn');
+                hideButton('home-btn');
+                hideButton('stage-btn');
+                showButton('transparent');"
+      >
+        <img src="../../sketches/assets/angry-birds/buttons/play-btn.png" alt="play-btn" />
+      </button>
+      <button
+        id="restart-btn"
+        type="button"
+        style="display: none"
+        onclick="showButton('pause-btn');
+                hideButton('pause-img');
+                hideButton('play-btn');
+                hideButton('restart-btn');
+                hideButton('home-btn');
+                hideButton('stage-btn');
+                showButton('transparent');"
+      >
+        <img src="../../sketches/assets/angry-birds/buttons/restart-btn.png" alt="restart-btn" />
+      </button>
+      <button
+        id="home-btn"
+        type="button"
+        style="display: none"
+        onclick="showButton('play-home');
+                hideButton('score1');
+                hideButton('score2');
+                hideButton('score3');
+                hideButton('score4');
+                hideButton('pause-img');
+                hideButton('play-btn');
+                hideButton('restart-btn');
+                hideButton('home-btn');
+                hideButton('stage-btn')
+                hideButton('rb-stage1');
+                hideButton('rb-stage2');
+                hideButton('rb-stage3');
+                hideButton('rb-stage4');"
+      >
+        <img src="../../sketches/assets/angry-birds/buttons/home-btn.png" alt="home-btn" />
+      </button>
+      <button
+        id="stage-btn"
+        type="button"
+        style="display: none"
+        onclick="showButton('stage');
+                hideButton('score1');
+                hideButton('score2');
+                hideButton('score3');
+                hideButton('score4');
+                hideButton('pause-img');
+                hideButton('play-btn');
+                hideButton('restart-btn');
+                hideButton('home-btn');
+                hideButton('stage-btn');
+                hideButton('rb-stage1');
+                hideButton('rb-stage2');
+                hideButton('rb-stage3');
+                hideButton('rb-stage4');"
+      >
+        <img src="../../sketches/assets/angry-birds/buttons/stage-btn.png" alt="stage-btn" />
+      </button>
+    </div>
+
+    <!-- score -->
+    <div id="score1" style="display: none">no record</div>
+    <div id="score2" style="display: none">no record</div>
+    <div id="score3" style="display: none">no record</div>
+    <div id="score4" style="display: none">no record</div>
+
+    <!-- remaining birds -->
+    <div id="rb-wrapper">
+      <div id="rb-stage1" style="display: none">
+        <div id="now-bird-stage1">Now</div>
+        <img src="../../sketches/assets/angry-birds/birds/red.png" id="rb-stage1-red1" />
+        <img src="../../sketches/assets/angry-birds/birds/red.png" id="rb-stage1-red2" />
+        <img src="../../sketches/assets/angry-birds/birds/red.png" id="rb-stage1-red3" />
+      </div>
+      <div id="rb-stage2" style="display: none">
+        <div id="now-bird-stage2">Now</div>
+        <img src="../../sketches/assets/angry-birds/birds/red.png" id="rb-stage2-red1" />
+        <img src="../../sketches/assets/angry-birds/birds/chuck.png" id="rb-stage2-chuck1" />
+        <img src="../../sketches/assets/angry-birds/birds/chuck.png" id="rb-stage2-chuck2" />
+      </div>
+      <div id="rb-stage3" style="display: none">
+        <div id="now-bird-stage3">Now</div>
+        <img src="../../sketches/assets/angry-birds/birds/red.png" id="rb-stage3-red1" />
+        <img src="../../sketches/assets/angry-birds/birds/chuck.png" id="rb-stage3-chuck1" />
+        <img src="../../sketches/assets/angry-birds/birds/bomb.png" id="rb-stage3-bomb1" />
+      </div>
+      <div id="rb-stage4" style="display: none">
+        <div id="now-bird-stage4">Now</div>
+        <img src="../../sketches/assets/angry-birds/birds/hal.png" id="rb-stage4-hal1" />
+        <img src="../../sketches/assets/angry-birds/birds/hal.png" id="rb-stage4-hal2" />
+        <img src="../../sketches/assets/angry-birds/birds/hal.png" id="rb-stage4-hal3" />
+      </div>
+    </div>
+
+    <!-- transparent -->
+    <button id="transparent" type="button" style="display: none"></button>
+
+    <!-- canvas container -->
+    <div id="AngryBirds"></div>
+  </block>
+  <block name="footer">Angry Birds</block>
+  <block name="scripts" type="append">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+      integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"
+      integrity="sha512-WzkwpdWEMAY/W8WvP9KS2/VI6zkgejR4/KTxTl4qHx0utqeyVE0JY+S1DlMuxDChC7x0oXtk/ESji6a0lP/Tdg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"
+      integrity="sha512-0z8URjGET6GWnS1xcgiLBZBzoaS8BNlKayfZyQNKz4IRp+s7CKXx0yz7Eco2+TcwoeMBa5KMwmTX7Kus7Fa5Uw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+    <script defer type="module" src="src/pages/main.js"></script>
+  </block>
+</extends>
