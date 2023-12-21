@@ -38,6 +38,12 @@ $high: (
 $cursor-action: pointer;
 $line-height-default: 1.4;
 
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
 /* Photon
   @see https://github.com/connors/photon */
 @import 'photonkit/sass/mixins', 'mixins/responsive-layout-mixin', 'mixins/theme-mixin';

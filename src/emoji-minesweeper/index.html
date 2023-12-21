@@ -1,0 +1,24 @@
+<extends src="responsive-layout.html">
+  <block name="title"><title>Emoji Minesweeper</title></block>
+  <block name="styles" type="append"><link rel="stylesheet" href="index.scss" /></block>
+  <block name="header">Emoji Minesweeper</block>
+  <block name="pane"><div id="EmojiMinesweeper"></div></block>
+  <block name="footer">Emoji Minesweeper</block>
+  <block name="scripts" type="append">
+    <script src="index.js" type="module" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"
+      integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"
+      integrity="sha512-uaz5GpnQoE6t5echKlX8P52czvsIGgLPcvlzfvRubLZ1Hp8JemUDnbUiAahbVtPb+jUVrNETuXvAhDDF/N3M4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="emojiMinesweeper.js"></script>
+    <script src="Square.js"></script>
+  </block>
+</extends>
