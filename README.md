@@ -1,6 +1,7 @@
 ### A few [Processing](https://processing.org) games:
 
-- [**Angry pacman**](https://codepen.io/matedemorphy/pen/bREMZJ) by [Joseph A.](https://github.com/matedemorphy).
+- [**Angry Birds**](https://github.com/yumin-jung/angry-birds) by [Yumin Jung](https://yumin.vercel.app).
+- [**Angry Pacman**](https://codepen.io/matedemorphy/pen/bREMZJ) by [Joseph A.](https://github.com/matedemorphy).
 - [**Asteroids**](https://codepen.io/tehryanx/pen/dOepMX) by [Ryan C](https://codepen.io/tehryanx).
 - [**Breakout**](https://editor.p5js.org/aabhay.kashyap/sketches/TpkMpovUj) by [Aabhay Kashyap](https://editor.p5js.org/aabhay.kashyap/sketches).
 - [**Chess**](https://openprocessing.org/sketch/1779274) (2 player game) by [HAZZZA](https://openprocessing.org/user/224122).
