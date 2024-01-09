@@ -22,17 +22,17 @@
   "dependencies": {
     "@fal-works/creative-coding-core": "^0.1.7",
     "@fal-works/p5-extension": "^0.1.7",
-    "bootstrap-icons": "^1.11.2",
+    "bootstrap-icons": "^1.11.3",
     "p5": "^0.9.0",
     "photonkit": "^0.1.2",
     "processing-js": "github:InoreNeronI/processing-js#main"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.10.3",
-    "@parcel/transformer-sass": "^2.10.3",
-    "@parcel/transformer-webmanifest": "^2.10.3",
+    "@parcel/packager-raw-url": "^2.11.0",
+    "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-webmanifest": "^2.11.0",
     "eslint": "^8.56.0",
-    "parcel": "^2.10.3",
+    "parcel": "^2.11.0",
     "posthtml-extend": "^0.6.5",
     "posthtml-include": "^1.7.4",
     "prettier": "3.1.1",

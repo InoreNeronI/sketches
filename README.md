@@ -12,6 +12,7 @@
 - [**Emoji Minesweeper**](https://github.com/michaelkolesidis/emoji-minesweeper) [Michael Kolesidis](https://michaelkolesidis.com).
 - [**Far East**](https://openprocessing.org/sketch/769137) (shooter game with graphics generated from Kanji characters) by [FAL Works](https://openprocessing.org/user/67512).
 - [**Flappy Bird**](https://openprocessing.org/sketch/729522) by [Stephen Rioux](https://openprocessing.org/user/63826).
+- [**Mario World**](https://pomax.github.io/Pjs-2D-Game-Engine) by [Pomax](https://pomax.github.io).
 - [**Pacman**](https://openprocessing.org/sketch/663582) by [ThingOnItsOwn](https://openprocessing.org/user/137792).
 - [**Pong**](https://github.com/michaelkolesidis/pong-processing) by [Michael Kolesidis](https://michaelkolesidis.com).
 - [**Pong 3D**](https://openprocessing.org/sketch/1385531) by [Isaac](https://openprocessing.org/user/298763).

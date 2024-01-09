@@ -1,0 +1,53 @@
+<extends src="responsive-layout.html">
+  <block name="title"><title>Mario World</title></block>
+  <block name="styles" type="append"><link rel="stylesheet" href="index.scss" /></block>
+  <block name="header">Mario World</block>
+  <block name="pane">
+    <p>
+      <strong>controls:</strong> cursor keys, and [z] and [x] for the jump/spin jump (left click to spawn random koopa
+      troopers, right click to drop a mushroom!).
+      <strong>debug controls:</strong> [1] toggles background, [2] toggles boundaries, [3] toggles pickups, [4] toggles
+      NPCs, [5] toggles Mario, [6] toggles the foreground, [7] toggle trigger regions, [8] toggles actor bounding boxes.
+    </p>
+    <canvas
+      autofocus
+      class="canvas-sketch"
+      data-processing-sources="preloads.pde
+                              spriteengine.pde
+                              drawbackground.pde
+
+                              Level.pde
+
+                              Drawable.pde
+                                Positionable.pde
+                                  Actor.pde
+                                    Player.pde
+                                    Interactor.pde
+                                      BoundedInteractor.pde
+                                    Pickup.pde
+                                  Boundary.pde
+                                  Trigger.pde
+                                  Sprite.pde
+                                  TilingSprite.pde
+
+                              SpriteMapHandler.pde
+                              SpritePath.pde
+                              SpritePathChunker.pde
+                              State.pde
+                              SoundManager.pde
+                              ShapePrimitives.pde
+
+                              JavaScript.pde"
+    ></canvas>
+  </block>
+  <block name="footer">Mario World</block>
+  <block name="scripts" type="append">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"
+      integrity="sha512-lbO95HE52QWwrDVEaDJmW9Xr8UIfMpRFT3akB8ett7lGfWsrGKz07L6wfwnF3KJ3T4a8cZupAKoI9Q2jH+0QIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="minim.js"></script>
+  </block>
+</extends>

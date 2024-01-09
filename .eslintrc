@@ -8,6 +8,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "no-cond-assign": "warn",
     "no-constant-condition": "warn",
     "no-dupe-else-if": "warn",
     "no-redeclare": "warn",

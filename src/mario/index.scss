@@ -1,0 +1,19 @@
+
+@font-face {
+  src: url('../../sketches/assets/mario/fonts/acmesa.ttf') format('truetype');
+  font-family: acmesa;
+}
+
+p, p > strong {
+  font-family: acmesa, Inter, 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif;
+}
+
+p {
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+}
+
+p > strong {
+  text-decoration: underline;
+}
