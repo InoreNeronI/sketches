@@ -35,7 +35,7 @@
     "parcel": "^2.11.0",
     "posthtml-extend": "^0.6.5",
     "posthtml-include": "^1.7.4",
-    "prettier": "3.2.1",
+    "prettier": "^3.2.2",
     "prettier-plugin-css-order": "^2.0.1"
   },
   "alias": {
