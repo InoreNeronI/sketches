@@ -29,17 +29,7 @@ const restartButton = document.getElementById('restart-btn');
 const homeButton = document.getElementById('home-btn');
 const stageButton = document.getElementById('stage-btn');
 
-let score,
-  engine,
-  render,
-  mouse,
-  runner,
-  mouseConstraint,
-  homeScreen,
-  tutorialStage,
-  pyramidStage,
-  twoPyramidStage,
-  boomerangStage;
+let score, engine, render, mouse, runner, mouseConstraint, homeScreen, tutorialStage, pyramidStage, twoPyramidStage, boomerangStage;
 let stageName = 'home';
 let firing = false;
 

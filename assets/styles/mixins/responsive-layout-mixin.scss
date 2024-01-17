@@ -1,7 +1,7 @@
 @use 'theme-mixin' as *;
-@import 'gradient-mixin', 'photonkit/sass/base', 'photonkit/sass/utilities', 'photonkit/sass/bars',
-  'photonkit/sass/button-groups', 'photonkit/sass/forms', 'photonkit/sass/grid', 'photonkit/sass/images',
-  'photonkit/sass/lists', 'photonkit/sass/tables', 'photonkit/sass/tabs';
+@import 'gradient-mixin', 'photonkit/sass/base', 'photonkit/sass/utilities', 'photonkit/sass/bars', 'photonkit/sass/button-groups',
+  'photonkit/sass/forms', 'photonkit/sass/grid', 'photonkit/sass/images', 'photonkit/sass/lists', 'photonkit/sass/tables',
+  'photonkit/sass/tabs';
 
 @mixin responsive-layout-mixin() {
   // LAYOUT

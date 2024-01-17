@@ -82,8 +82,7 @@ class Grid {
           if (firstTargetCell == -1) {
             firstTargetCell = [j, i];
           } else {
-            if (firstGridCell[0] + j - firstTargetCell[0] >= this.w || firstGridCell[0] + j - firstTargetCell[0] < 0)
-              return false;
+            if (firstGridCell[0] + j - firstTargetCell[0] >= this.w || firstGridCell[0] + j - firstTargetCell[0] < 0) return false;
             let cell = this.grid[firstGridCell[0] + j - firstTargetCell[0]][firstGridCell[1] + i - firstTargetCell[1]];
 
             if (cell instanceof Cell && !cell.selected) {
@@ -112,9 +111,7 @@ class Grid {
         if (this.grid[i][j].selected) {
           this.grid[i][j].selected = false;
           this.grid[i][j].dead = true;
-          fallingCells.push(
-            new FallingCell(this.grid[i][j].xPos, this.grid[i][j].yPos, this.cellSize, this.targetColour),
-          );
+          fallingCells.push(new FallingCell(this.grid[i][j].xPos, this.grid[i][j].yPos, this.cellSize, this.targetColour));
         }
       }
     }

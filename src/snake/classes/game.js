@@ -110,13 +110,7 @@ class Game {
     }
 
     const move =
-      abs(dx) > abs(dy)
-        ? dx > 0
-          ? this.SNAKE_MOVES.RIGHT
-          : this.SNAKE_MOVES.LEFT
-        : dy > 0
-          ? this.SNAKE_MOVES.DOWN
-          : this.SNAKE_MOVES.UP;
+      abs(dx) > abs(dy) ? (dx > 0 ? this.SNAKE_MOVES.RIGHT : this.SNAKE_MOVES.LEFT) : dy > 0 ? this.SNAKE_MOVES.DOWN : this.SNAKE_MOVES.UP;
 
     this._queueMove(move);
   }

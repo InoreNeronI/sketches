@@ -243,18 +243,10 @@ function playPiece() {
     var points = orientPoints(this.pieceType, this.rotation);
     this.orientation = points;
     this.pieces = [];
-    this.pieces.push(
-      new square(this.pos.x + points[0][0] * gridSpace, this.pos.y + points[0][1] * gridSpace, this.pieceType),
-    );
-    this.pieces.push(
-      new square(this.pos.x + points[1][0] * gridSpace, this.pos.y + points[1][1] * gridSpace, this.pieceType),
-    );
-    this.pieces.push(
-      new square(this.pos.x + points[2][0] * gridSpace, this.pos.y + points[2][1] * gridSpace, this.pieceType),
-    );
-    this.pieces.push(
-      new square(this.pos.x + points[3][0] * gridSpace, this.pos.y + points[3][1] * gridSpace, this.pieceType),
-    );
+    this.pieces.push(new square(this.pos.x + points[0][0] * gridSpace, this.pos.y + points[0][1] * gridSpace, this.pieceType));
+    this.pieces.push(new square(this.pos.x + points[1][0] * gridSpace, this.pos.y + points[1][1] * gridSpace, this.pieceType));
+    this.pieces.push(new square(this.pos.x + points[2][0] * gridSpace, this.pos.y + points[2][1] * gridSpace, this.pieceType));
+    this.pieces.push(new square(this.pos.x + points[3][0] * gridSpace, this.pos.y + points[3][1] * gridSpace, this.pieceType));
   };
   //Whenever the piece gets rotated, this gets the new positions of the squares
   this.updatePoints = function () {

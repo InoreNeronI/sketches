@@ -50,13 +50,7 @@ function draw() {
 
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length; j++) {
-      if (
-        i !== j &&
-        array[i].i == array[j].i &&
-        myCollides(array[i].sprite, array[j].sprite) &&
-        !array[i].removed &&
-        !array[j].removed
-      ) {
+      if (i !== j && array[i].i == array[j].i && myCollides(array[i].sprite, array[j].sprite) && !array[i].removed && !array[j].removed) {
         //add new fruit
         let a = array[i].sprite;
         let b = array[i].sprite;

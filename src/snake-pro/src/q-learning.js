@@ -53,8 +53,7 @@ const QLearn = (
     /**
      * Returns the best action index for a given position in the policy
      */
-    (ql.getActionIndex = (node) =>
-      ql.getQs(node).reduce((acc, v, i, arr) => (i > 0 ? (v > arr[acc] ? i : acc) : i), 0)),
+    (ql.getActionIndex = (node) => ql.getQs(node).reduce((acc, v, i, arr) => (i > 0 ? (v > arr[acc] ? i : acc) : i), 0)),
     /**
      * Returns a random action index
      */

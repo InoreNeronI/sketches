@@ -1,9 +1,4 @@
-const Hamiltonian = (
-  findDestroyerStepLimit = 100,
-  findConnectorStepLimit = 100,
-  findConnectorIterLimit = 1000,
-  updateLimit = 30,
-) => {
+const Hamiltonian = (findDestroyerStepLimit = 100, findConnectorStepLimit = 100, findConnectorIterLimit = 1000, updateLimit = 30) => {
   const hm = {};
 
   hm.getAction = (node, state = null) => {
@@ -81,14 +76,7 @@ fnHamiltonian = {
    * Returns a graph initialized to the given dimensions.
    * Will attempt to find a hamiltonian cycle while adhering to the given limits.
    */
-  buildCycle: (
-    nx,
-    ny,
-    exclusions = NodeSet(),
-    findDestroyerStepLimit = 0,
-    findConnectorStepLimit = 100,
-    findConnectorIterLimit = 100,
-  ) => {
+  buildCycle: (nx, ny, exclusions = NodeSet(), findDestroyerStepLimit = 0, findConnectorStepLimit = 100, findConnectorIterLimit = 100) => {
     let graph = fnHamiltonian.mkGraph(nx, ny);
     fnHamiltonian.processExclusions(graph, exclusions);
     fnHamiltonian.runDeletion(graph);
@@ -283,8 +271,7 @@ fnHamiltonian = {
       dn.length % 2 == 0 &&
       dn.vertex.getEdge(dn.dirToParent) == 1 &&
       dn.parent.vertex.getEdge(dn.parent.dirToParent) == 0;
-    dn.isAltEdge =
-      dn.length < 3 ? false : dn.vertex.getEdge(dn.dirToParent) != dn.parent.vertex.getEdge(dn.parent.dirToParent);
+    dn.isAltEdge = dn.length < 3 ? false : dn.vertex.getEdge(dn.dirToParent) != dn.parent.vertex.getEdge(dn.parent.dirToParent);
     dn.isEvenAltEdge = dn.isAltEdge && dn.length % 2 == 1;
 
     dn.toPath = () => {
@@ -305,9 +292,7 @@ fnHamiltonian = {
     const continuePath = (current, dir) => {
       const neighbor = current.vertex.getNeighbor(dir);
       // If the next vertex is not already part of the path (unless it is the start node), and meets path criteria
-      return (
-        neighbor != null && (neighbor == start || !current.pathVertices.hasNode(neighbor)) && pathCriteria(current, dir)
-      );
+      return neighbor != null && (neighbor == start || !current.pathVertices.hasNode(neighbor)) && pathCriteria(current, dir);
     };
     // Start BFS
     const open = [fnHamiltonian.PathNode(start, null)];
@@ -342,10 +327,7 @@ fnHamiltonian = {
   findConnector: (graph, start, goals, stepLimit = 100) => {
     //
     const pathCriteria = (current, dir) => {
-      return (
-        current.length < 3 ||
-        (current.isAltEdge && current.vertex.getEdge(current.dirToParent) != current.vertex.getEdge(dir))
-      );
+      return current.length < 3 || (current.isAltEdge && current.vertex.getEdge(current.dirToParent) != current.vertex.getEdge(dir));
     };
     const goalCriteria = (current) => current.isEvenAltEdge;
     return fnHamiltonian._find(graph, start, goals, stepLimit, pathCriteria, goalCriteria);

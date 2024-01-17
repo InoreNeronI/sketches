@@ -301,13 +301,7 @@ function page_game() {
   }
 
   //City
-  image(
-    sprite_city,
-    sprite_city.width / 2 / 2,
-    height - sprite_city.height / 2 / 2 - 40,
-    sprite_city.width / 2,
-    sprite_city.height / 2,
-  );
+  image(sprite_city, sprite_city.width / 2 / 2, height - sprite_city.height / 2 / 2 - 40, sprite_city.width / 2, sprite_city.height / 2);
 
   //creator
   if (!flappy_bird.falls) {
@@ -330,13 +324,7 @@ function page_game() {
   }
 
   //Floor
-  image(
-    sprite_floor,
-    sprite_floor.width - overflowX,
-    height - sprite_floor.height,
-    sprite_floor.width * 2,
-    sprite_floor.height * 2,
-  );
+  image(sprite_floor, sprite_floor.width - overflowX, height - sprite_floor.height, sprite_floor.width * 2, sprite_floor.height * 2);
   image(
     sprite_floor,
     sprite_floor.width + sprite_floor.width - overflowX,
@@ -387,22 +375,10 @@ function page_menu() {
   }
 
   //City
-  image(
-    sprite_city,
-    sprite_city.width / 2 / 2,
-    height - sprite_city.height / 2 / 2 - 40,
-    sprite_city.width / 2,
-    sprite_city.height / 2,
-  );
+  image(sprite_city, sprite_city.width / 2 / 2, height - sprite_city.height / 2 / 2 - 40, sprite_city.width / 2, sprite_city.height / 2);
 
   //Floor
-  image(
-    sprite_floor,
-    sprite_floor.width - overflowX,
-    height - sprite_floor.height,
-    sprite_floor.width * 2,
-    sprite_floor.height * 2,
-  );
+  image(sprite_floor, sprite_floor.width - overflowX, height - sprite_floor.height, sprite_floor.width * 2, sprite_floor.height * 2);
   image(
     sprite_floor,
     sprite_floor.width + sprite_floor.width - overflowX,

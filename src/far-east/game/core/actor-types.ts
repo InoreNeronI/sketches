@@ -192,8 +192,7 @@ onSetup.push((p) => {
       const y = data.y[i];
       const directionToPlayer = GameCore.getDirectionToPlayer(x, y);
       data.rotationAngle[i] = directionToPlayer;
-      if (data.frameCount[i] % 4 === 0 && Random.bool(0.2))
-        GameCore.fireEnemyBullet(x, y, 4, directionToPlayer, enemyBullet);
+      if (data.frameCount[i] % 4 === 0 && Random.bool(0.2)) GameCore.fireEnemyBullet(x, y, 4, directionToPlayer, enemyBullet);
     },
     (data, i) => {
       const frameCount = data.frameCount[i];

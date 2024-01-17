@@ -13,9 +13,7 @@ const ShortestPath = () => {
     const neighbors = [state.direction]
       .concat(game.DIRECTIONS.filter((d) => !d.eq(state.direction)))
       .map((d) => state.snake[0].sum(d))
-      .filter(
-        (n) => n.inBounds(state.nx, state.ny) && !state.snake.some((n1) => n1.eq(n) && !state.walls.has(n.x, n.y)),
-      );
+      .filter((n) => n.inBounds(state.nx, state.ny) && !state.snake.some((n1) => n1.eq(n) && !state.walls.has(n.x, n.y)));
 
     if (neighbors.length > 0) return fnShortestPath.buildPath([start, neighbors[0]]);
     else return fnShortestPath.buildPath([start, state.snake[0].sum(state.direction)]);

@@ -94,8 +94,7 @@ const sketch = (p) => {
   let gameSizeLabel = null;
   let gameSizeSlider = null;
   const initGameSizeSlider = () => {
-    if (playerSelect.value() == HMC)
-      gameSizeSlider = p.createSlider(SIZE_MIN, SIZE_MAX_HAMILTONIAN, SIZE_INITIAL_HAMILTONIAN, SIZE_STEP);
+    if (playerSelect.value() == HMC) gameSizeSlider = p.createSlider(SIZE_MIN, SIZE_MAX_HAMILTONIAN, SIZE_INITIAL_HAMILTONIAN, SIZE_STEP);
     else gameSizeSlider = p.createSlider(SIZE_MIN, SIZE_MAX, SIZE_INITIAL, SIZE_STEP);
     gameSizeLabel = p.createSpan(`${gameSizeSlider.value()}`);
     gameSizeLabel.parent('#gameSizeLbl');
@@ -346,14 +345,7 @@ const p5Utils = {
   _drawArrow: (p, node, tipXMove, tipYMove, baseXMove, baseYMove, toX, toY) => {
     let x = node.x + 0.5;
     let y = node.y + 0.5;
-    p.triangle(
-      toX(x + baseXMove),
-      toY(y + baseYMove),
-      toX(x + tipXMove),
-      toY(y + tipYMove),
-      toX(x - baseXMove),
-      toY(y - baseYMove),
-    );
+    p.triangle(toX(x + baseXMove), toY(y + baseYMove), toX(x + tipXMove), toY(y + tipYMove), toX(x - baseXMove), toY(y - baseYMove));
   },
 };
 

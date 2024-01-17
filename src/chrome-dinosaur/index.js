@@ -99,13 +99,7 @@ function draw() {
         score = 0;
         ground.x = 0;
 
-        image(
-          game_over,
-          width / 2 - game_over_width / 2,
-          height / 2 - game_over_height / 2,
-          game_over_width,
-          game_over_height,
-        );
+        image(game_over, width / 2 - game_over_width / 2, height / 2 - game_over_height / 2, game_over_width, game_over_height);
         noLoop();
       }
     }
