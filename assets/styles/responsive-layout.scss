@@ -52,7 +52,7 @@ $line-height-default: 1.4;
   @import 'photonkit/sass/appify';
   // THEMING
   // Forest
-  @if variable-exists(forest) and variable-exists(forest) {
+  @if variable-exists(forest) {
     &.inset.forest {
       @include theme-mixin(#{map.get($forest, 'dark')}, #{map.get($forest, 'light')});
       @include responsive-layout-mixin();
@@ -63,7 +63,7 @@ $line-height-default: 1.4;
     }
   }
   // Fire
-  @if variable-exists(fire) and variable-exists(fire) {
+  @if variable-exists(fire) {
     &.inset.fire {
       @include theme-mixin(#{map.get($fire, 'dark')}, #{map.get($fire, 'light')});
       @include responsive-layout-mixin();
@@ -74,7 +74,7 @@ $line-height-default: 1.4;
     }
   }
   // Earth
-  @if variable-exists(earth) and variable-exists(earth) {
+  @if variable-exists(earth) {
     &.inset.earth {
       @include theme-mixin(#{map.get($earth, 'dark')}, #{map.get($earth, 'light')});
       @include responsive-layout-mixin();
@@ -85,7 +85,7 @@ $line-height-default: 1.4;
     }
   }
   // Air
-  @if variable-exists(air) and variable-exists(air) {
+  @if variable-exists(air) {
     &.inset.air {
       @include theme-mixin(#{map.get($air, 'dark')}, #{map.get($air, 'light')});
       @include responsive-layout-mixin();
@@ -96,7 +96,7 @@ $line-height-default: 1.4;
     }
   }
   // Water
-  @if variable-exists(water) and variable-exists(water) {
+  @if variable-exists(water) {
     &.inset.water {
       @include theme-mixin(#{map.get($water, 'dark')}, #{map.get($water, 'light')});
       @include responsive-layout-mixin();
@@ -107,7 +107,7 @@ $line-height-default: 1.4;
     }
   }
   // High contrast
-  @if variable-exists(high) and variable-exists(high) {
+  @if variable-exists(high) {
     &.inset.high {
       @include theme-mixin(#{map.get($high, 'dark')}, #{map.get($high, 'light')});
       @include responsive-layout-mixin();
