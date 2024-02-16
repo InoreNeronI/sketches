@@ -34,7 +34,7 @@
     "eslint": "^8.56.0",
     "parcel": "^2.11.0",
     "posthtml-extend": "^0.6.5",
-    "posthtml-include": "^1.7.4",
+    "posthtml-include": "^2.0.0",
     "prettier": "^3.2.5",
     "prettier-plugin-css-order": "^2.0.1"
   },
