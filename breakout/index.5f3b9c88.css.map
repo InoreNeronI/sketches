@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;;AAIE","sources":["src/breakout/index.scss"],"sourcesContent":["#Breakout {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  > canvas {\n    display: block;\n    position: relative;\n    margin: auto;\n    padding: 0;\n  }\n}\n"],"names":[],"version":3,"file":"index.5f3b9c88.css.map"}

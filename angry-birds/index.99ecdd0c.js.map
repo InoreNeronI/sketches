@@ -1,1 +1,0 @@
-{"mappings":"","sources":["src/angry-birds/index.js"],"sourcesContent":["function showButton(btn) {\n  document.getElementById(btn).style.display = 'flex';\n}\nfunction hideButton(btn) {\n  document.getElementById(btn).style.display = 'none';\n}\n"],"names":[],"version":3,"file":"index.99ecdd0c.js.map"}

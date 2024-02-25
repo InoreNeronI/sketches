@@ -1,0 +1,14 @@
+#Suika {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#Suika > canvas {
+  margin: auto;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+
+/*# sourceMappingURL=index.b278da79.css.map */

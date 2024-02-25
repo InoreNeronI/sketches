@@ -1,0 +1,12 @@
+#Asteroids {
+  display: flex;
+}
+
+#Asteroids > canvas {
+  margin: auto;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+
+/*# sourceMappingURL=index.e802bc45.css.map */

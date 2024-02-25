@@ -1,0 +1,14 @@
+#SpaceInvaders {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#SpaceInvaders > canvas {
+  margin: auto;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+
+/*# sourceMappingURL=index.4f664f1d.css.map */

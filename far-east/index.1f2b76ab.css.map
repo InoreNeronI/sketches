@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;;AAIE","sources":["src/far-east/index.scss"],"sourcesContent":["#FarEast {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  > canvas {\n    display: block;\n    position: relative;\n    margin: auto;\n    padding: 0;\n    width: 800px;\n    height: 800px;\n  }\n}\n"],"names":[],"version":3,"file":"index.1f2b76ab.css.map"}

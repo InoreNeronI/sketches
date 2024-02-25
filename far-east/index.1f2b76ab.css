@@ -1,0 +1,16 @@
+#FarEast {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#FarEast > canvas {
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+
+/*# sourceMappingURL=index.1f2b76ab.css.map */

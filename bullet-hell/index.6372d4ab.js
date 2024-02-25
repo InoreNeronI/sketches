@@ -1,2 +1,0 @@
-const o={};o.bomb={color:"#007C21",onPickup(o){bombs++}},o.dualFire={color:"#F1C40F",canPickUp:o=>"dualFire"!==o.weapon&&"tripleFire"!==o.weapon,onPickup(o){o.fireRate=10,o.weapon="dualFire"}},o.tripleFire={color:"#B71C0C",canPickUp:o=>"tripleFire"!==o.weapon,onPickup(o){o.fireRate=8,o.weapon="tripleFire"}},o.health={color:"#D73C2C",model:MODEL.item.health,r:16,canPickUp:o=>o.hp<o.maxHp,onPickup(o){o.heal()}},o.points={color:"#22A7F0",onPickup(o){addScore(100)}},o.points2x={color:"#FF6CA8",onPickup(o){addScore(200)}};
-//# sourceMappingURL=index.6372d4ab.js.map

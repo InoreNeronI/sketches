@@ -1,1 +1,0 @@
-{"mappings":"","sources":["src/snake/classes/block.js"],"sourcesContent":["class Block {\n  constructor(x, y, width, colour) {\n    this.x = x;\n    this.y = y;\n    this.width = width;\n    this.colour = colour;\n  }\n\n  draw() {\n    fill(this.colour);\n    rect(this.x, this.y, this.width, this.width);\n  }\n}\n"],"names":[],"version":3,"file":"index.d3d3e491.js.map"}
