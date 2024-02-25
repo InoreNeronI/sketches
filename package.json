@@ -4,10 +4,10 @@
   "description": "A couple of Processing games",
   "homepage": "https://github.com/InoreNeronI/sketches",
   "scripts": {
-    "build": "parcel build src/{*.html,**/*.html} --public-url /sketches",
+    "build": "parcel build src/{**/*.html,*.html} --log-level verbose --no-optimize --public-url /sketches",
     "postbuild": "cp -nrv sketches/* dist",
     "prestart": "rm -fr .parcel-cache dist && eslint --fix . && prettier --write . && mkdir dist && npm run postbuild",
-    "start": "parcel serve src/{*.html,**/*.html} --open"
+    "start": "parcel serve src/{**/*.html,*.html} --log-level verbose --open"
   },
   "repository": {
     "type": "git",
@@ -31,10 +31,10 @@
     "@parcel/packager-raw-url": "^2.11.0",
     "@parcel/transformer-sass": "^2.11.0",
     "@parcel/transformer-webmanifest": "^2.11.0",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "parcel": "^2.11.0",
     "posthtml-extend": "^0.6.5",
-    "posthtml-include": "^2.0.0",
+    "posthtml-include": "^2.0.1",
     "prettier": "^3.2.5",
     "prettier-plugin-css-order": "^2.0.1"
   },
@@ -50,9 +50,8 @@
     }
   },
   "targets": {
-    "global": {
-      "context": "browser",
-      "outputFormat": "global"
+    "default": {
+      "context": "browser"
     }
   }
 }
